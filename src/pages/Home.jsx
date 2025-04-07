@@ -15,12 +15,12 @@ const Home = () => {
     <div className="container mx-auto">
       <AppBanner></AppBanner>
 
-      <AboutMeProvider>
+      <AboutMeProvider >
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, delay: 1 }}
           exit={{ opacity: 0 }}
-          className="container mx-auto"
+          className="w-100 mw-100 m-0 p-0"
         >
           <AboutMeBio />
         </motion.div>

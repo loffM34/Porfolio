@@ -112,17 +112,6 @@ const AppHeader = () => {
           <a
             onClick={() =>
               document
-                .getElementById("projectsSection")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 cursor-pointer"
-            aria-label="Projects"
-          >
-            Projects
-          </a>
-          <a
-            onClick={() =>
-              document
                 .getElementById("aboutMeSection")
                 .scrollIntoView({ behavior: "smooth", block: "center" })
             }
@@ -130,6 +119,17 @@ const AppHeader = () => {
             aria-label="About Me"
           >
             About Me
+          </a>
+          <a
+            onClick={() =>
+              document
+                .getElementById("projectsSection")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 cursor-pointer"
+            aria-label="Projects"
+          >
+            Projects
           </a>
 
           <a
@@ -143,19 +143,21 @@ const AppHeader = () => {
           >
             Contact
           </a>
-          <div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-            <span
-              onClick={showHireMeModal}
-              className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24 cursor-pointer"
-              aria-label="Hire Me Button"
-            >
-              <Button title="Hire Me" />
-            </span>
-          </div>
         </div>
 
         {/* Header links large screen */}
         <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
+        <a
+            onClick={() =>
+              document
+                .getElementById("aboutMeSection")
+                .scrollIntoView({ behavior: "smooth", block: "center" })
+            }
+            className="block text-left text-3xl text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 cursor-pointer"
+            aria-label="About Me"
+          >
+            About Me
+          </a>
           <a
             onClick={() =>
               document
@@ -167,17 +169,7 @@ const AppHeader = () => {
           >
             Projects
           </a>
-          <a
-            onClick={() =>
-              document
-                .getElementById("aboutMeSection")
-                .scrollIntoView({ behavior: "smooth", block: "center" })
-            }
-            className="block text-left text-3xl text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 cursor-pointer"
-            aria-label="About Me"
-          >
-            About Me
-          </a>
+
           <a
             onClick={() =>
               document
