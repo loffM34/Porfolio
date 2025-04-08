@@ -1,17 +1,17 @@
 // Import images
-import WebImage1 from "../images/web-project-1.jpg";
-import WebImage2 from "../images/web-project-2.jpg";
-import MobileImage1 from "../images/mobile-project-1.jpg";
-import MobileImage2 from "../images/mobile-project-2.jpg";
+import MacroVisionLogo from "../images/MacroVisionLogo.png";
+import MoolaLogo from "../images/moolaLogo.png";
+import WaveWatchLogo from "../images/waveWatchLogo.png";
+import ClubCompassLogo from "../images/clubCompassLogo.png";
 import UIImage1 from "../images/ui-project-1.jpg";
 import UIImage2 from "../images/ui-project-2.jpg";
 
 export const projectsData = [
   {
     id: 1,
-    title: "Google Health Platform",
+    title: "Wave-Watch",
     category: "Web Application",
-    img: WebImage2,
+    img: WaveWatchLogo,
     ProjectHeader: {
       title: "Project Management UI - From Context",
       publishDate: "Jul 26, 2021",
@@ -20,32 +20,32 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "Phoenix Digital Agency",
-    category: "Mobile Application",
-    img: MobileImage2,
+    title: "MacroVision",
+    category: "Web Application",
+    img: MacroVisionLogo,
   },
   {
     id: 3,
-    title: "Project Management UI",
+    title: "Moola",
     category: "UI/UX Design",
-    img: UIImage1,
+    img: MoolaLogo,
   },
   {
     id: 4,
-    title: "Cloud Storage Platform",
+    title: "Club Compass",
     category: "UI/UX Design",
-    img: UIImage2,
+    img: ClubCompassLogo,
   },
-  {
-    id: 5,
-    title: "React Social App",
-    category: "Mobile Application",
-    img: MobileImage1,
-  },
-  {
-    id: 6,
-    title: "Apple Design System",
-    category: "Web Application",
-    img: WebImage1,
-  },
+  // {
+  //   id: 5,
+  //   title: "React Social App",
+  //   category: "Mobile Application",
+  //   img: MobileImage1,
+  // },
+  // {
+  //   id: 6,
+  //   title: "Apple Design System",
+  //   category: "Web Application",
+  //   img: WebImage1,
+  // },
 ];

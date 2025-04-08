@@ -7,7 +7,6 @@ import { ProjectsProvider } from "../context/ProjectsContext";
 import Button from "../components/reusable/Button";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import AboutMe from "../components/about/testAboutComponent";
 
 import ContactDetails from "../components/contact/ContactDetails";
 

@@ -2,7 +2,7 @@ import profileImage from "../../images/profile.jpg";
 import { useContext } from "react";
 import AboutMeContext from "../../context/AboutMeContext";
 import NoteBoard from "./NoteBoard";
-import AboutMe from "./testAboutComponent";
+import ProfileCard from "./ProfileCard";
 const AboutMeBio = () => {
   const { aboutMe } = useContext(AboutMeContext);
 
@@ -12,7 +12,7 @@ const AboutMeBio = () => {
       id="aboutMeSection"
       style={{ marginTop: "250px", marginBottom: "250px" }}
     >
-      <AboutMe />
+      <ProfileCard></ProfileCard>
     </div>
   );
 };
