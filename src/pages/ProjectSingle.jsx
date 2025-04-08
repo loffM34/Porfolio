@@ -1,11 +1,14 @@
+import { useLocation } from "react-router-dom";
 import ProjectGallery from "../components/projects/ProjectGallery";
 import ProjectHeader from "../components/projects/ProjectHeader";
 import ProjectInfo from "../components/projects/ProjectInfo";
-import ProjectRelatedProjects from "../components/projects/ProjectRelatedProjects";
-import { SingleProjectProvider } from "../context/SingleProjectContext";
+// import ProjectRelatedProjects from "../components/projects/ProjectRelatedProjects";
+import { AllProjectsProvider } from "../context/AllProjectsContext";
 import { motion } from "framer-motion";
 
 const ProjectSingle = () => {
+  const location = useLocation();
+  const projectId = location.state?.projectId;
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -17,12 +20,12 @@ const ProjectSingle = () => {
       }}
       className="container mx-auto mt-5 sm:mt-10"
     >
-      <SingleProjectProvider>
-        <ProjectHeader />
-        <ProjectGallery />
-        <ProjectInfo />
-        <ProjectRelatedProjects />
-      </SingleProjectProvider>
+      <AllProjectsProvider>
+        <ProjectHeader projectId={projectId} />
+        <ProjectGallery projectId={projectId} />
+        <ProjectInfo projectId={projectId} />
+        {/* <ProjectRelatedProjects /> */}
+      </AllProjectsProvider>
     </motion.div>
   );
 };
