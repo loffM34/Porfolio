@@ -7,6 +7,7 @@ import logoLight from "../../images/logo-light.png";
 import logoDark from "../../images/logo-dark.png";
 import { motion } from "framer-motion";
 import Button from "../reusable/Button";
+import { useNavigate } from "react-router-dom";
 
 const AppHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -34,6 +35,22 @@ const AppHeader = () => {
       setShowModal(false);
     }
   }
+
+  const navigate = useNavigate();
+
+  const handleNav = (section) => {
+    const path = window.location.pathname;
+    if (path === "/") {
+      // Already on homepage — manually scroll
+      const target = document.getElementById(section);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      // Navigate to homepage with hash
+      navigate(`/#${section}`);
+    }
+  };
 
   return (
     <motion.nav
@@ -110,22 +127,14 @@ const AppHeader = () => {
           }
         >
           <a
-            onClick={() =>
-              document
-                .getElementById("aboutMeSection")
-                .scrollIntoView({ behavior: "smooth", block: "center" })
-            }
+            onClick={() => handleNav("aboutMeSection")}
             className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark cursor-pointer"
             aria-label="About Me"
           >
             About Me
           </a>
           <a
-            onClick={() =>
-              document
-                .getElementById("projectsSection")
-                .scrollIntoView({ behavior: "smooth" })
-            }
+            onClick={() => handleNav("projectsSection")}
             className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 cursor-pointer"
             aria-label="Projects"
           >
@@ -133,11 +142,7 @@ const AppHeader = () => {
           </a>
 
           <a
-            onClick={() =>
-              document
-                .getElementById("contactSection")
-                .scrollIntoView({ behavior: "smooth", block: "center" })
-            }
+            onClick={() => handleNav("contactSection")}
             className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark cursor-pointer"
             aria-label="Contact"
           >
@@ -147,23 +152,15 @@ const AppHeader = () => {
 
         {/* Header links large screen */}
         <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-        <a
-            onClick={() =>
-              document
-                .getElementById("aboutMeSection")
-                .scrollIntoView({ behavior: "smooth", block: "center" })
-            }
+          <a
+            onClick={() => handleNav("aboutMeSection")}
             className="block text-left text-3xl text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 cursor-pointer"
             aria-label="About Me"
           >
             About Me
           </a>
           <a
-            onClick={() =>
-              document
-                .getElementById("projectsSection")
-                .scrollIntoView({ behavior: "smooth" })
-            }
+            onClick={() => handleNav("projectsSection")}
             className="block text-left text-3xl text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 cursor-pointer"
             aria-label="Projects"
           >
@@ -171,11 +168,7 @@ const AppHeader = () => {
           </a>
 
           <a
-            onClick={() =>
-              document
-                .getElementById("contactSection")
-                .scrollIntoView({ behavior: "smooth", block: "center" })
-            }
+            onClick={() => handleNav("contactSection")}
             className="block text-left text-3xl text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 cursor-pointer"
             aria-label="Contact"
           >

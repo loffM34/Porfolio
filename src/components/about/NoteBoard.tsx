@@ -25,17 +25,6 @@ const NoteBoard: React.FC = () => {
   const [notes, setNotes] = useState<Note[]>([
     {
       id: 1,
-      x: 250,
-      y: 250,
-      content: (
-        <div>
-          <h4>📷 My Profile</h4>
-          <img src={profileImage} alt="Profile" className="rounded-lg w-32" />
-        </div>
-      ),
-    },
-    {
-      id: 2,
       x: 400,
       y: 200,
       content: (
@@ -45,6 +34,36 @@ const NoteBoard: React.FC = () => {
               {bio.bio}
             </p>
           ))}
+        </div>
+      ),
+    },
+    {
+      id: 2,
+      x: 250,
+      y: 250,
+      content: (
+        <div>
+          <img src={profileImage} alt="Profile" className="rounded-lg w-32" />
+        </div>
+      ),
+    },
+    {
+      id: 3,
+      x: 250,
+      y: 250,
+      content: (
+        <div className="bg-transparent">
+          <img src={profileImage} alt="Profile" className="rounded-lg w-32" />
+        </div>
+      ),
+    },
+    {
+      id: 4,
+      x: 250,
+      y: 250,
+      content: (
+        <div>
+          <img src={profileImage} alt="Profile" className="rounded-lg w-32" />
         </div>
       ),
     },
@@ -61,11 +80,12 @@ const NoteBoard: React.FC = () => {
       onClick={() => setFocusedNoteId(null)} // 👈 This clears the focus
       style={{
         position: "relative",
-        height: "600px",
+        height: "1000px",
+        maxHeight: "1000px",
         border: "2px dashed #ccc",
         margin: "2rem auto",
         width: "100%",
-        maxWidth: "800px",
+        maxWidth: "1500px",
         background: "#0d2438",
         backgroundImage: `url(${corkBoard})`,
         backgroundSize: "100% 100%",
@@ -86,32 +106,6 @@ const NoteBoard: React.FC = () => {
           {note.content}
         </PostIt>
       ))}
-
-      {/* <PostIt
-        id={3}
-        x={150}
-        y={150}
-        text={"About Me"}
-        onDrag={updateNotePosition}
-      >
-        <div>
-          <div className="w-full sm:w-1/4 mb-7 sm:mb-0 ">
-            <img src={profileImage} className="rounded-lg w-96" alt="" />
-          </div>
-
-          <div className="font-general-regular w-full sm:w-3/4 text-left">
-            {aboutMe.map((bio) => (
-              <p
-                className="mb-4 text-ternary-dark dark:text-ternary-light text-lg"
-                key={bio.id}
-              >
-                {bio.bio}
-              </p>
-            ))}
-          </div>
-        </div>
-      </PostIt>
-    */}
     </div>
   );
 };

@@ -5,17 +5,33 @@ import { AboutMeProvider } from "../context/AboutMeContext";
 import ProjectsGrid from "../components/projects/ProjectsGrid";
 import { ProjectsProvider } from "../context/ProjectsContext";
 import Button from "../components/reusable/Button";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import AboutMe from "../components/about/testAboutComponent";
 
 import ContactDetails from "../components/contact/ContactDetails";
 
 import { motion } from "framer-motion";
+import About from "./AboutMe";
 
 const Home = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+      }
+    }
+  }, [hash]);
   return (
     <div className="container mx-auto">
       <AppBanner></AppBanner>
 
-      <AboutMeProvider >
+      <AboutMeProvider>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, delay: 1 }}

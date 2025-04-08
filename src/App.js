@@ -12,6 +12,7 @@ const Contact = lazy(() => import("./pages/Contact.jsx"));
 const Home = lazy(() => import("./pages/Home"));
 const Projects = lazy(() => import("./pages/Projects"));
 const ProjectSingle = lazy(() => import("./pages/ProjectSingle.jsx"));
+const TestPage = lazy(() => import("./pages/testPage"));
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="projects" element={<Projects />} />
+              <Route path="testPage" element={<TestPage />} />
               <Route
                 path="projects/single-project"
                 element={<ProjectSingle />}
