@@ -1,5 +1,5 @@
 import useThemeSwitcher from "../../hooks/useThemeSwitcher";
-import { FiArrowDownCircle, FiEye } from "react-icons/fi";
+import { FiArrowDownCircle, FiEye, FiMapPin } from "react-icons/fi";
 import HireMeModal from "../HireMeModal";
 import surfingDeveloper from "../../images/surfingDeveloper.png";
 import { motion } from "framer-motion";
@@ -42,7 +42,7 @@ const AppBanner = () => {
         >
           Hi, I am Michael
         </motion.h1>
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
@@ -52,8 +52,12 @@ const AppBanner = () => {
           }}
           className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
         >
-          A CS student / Software Engineer
-        </motion.p>
+          Software Engineer
+          <p className="flex items-center gap-2 text-md max-w-xl mb-4 text-ternary-dark dark:text-ternary-light">
+  <FiMapPin className="text-lg" />
+  <span>Hoboken, NJ</span>
+</p>
+        </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

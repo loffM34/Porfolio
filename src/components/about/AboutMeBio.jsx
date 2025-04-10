@@ -10,7 +10,7 @@ const AboutMeBio = () => {
     <div
       className="justify-center block sm:flex sm:gap-10 mt-10 sm:mt-20 overflow-visible"
       id="aboutMeSection"
-      style={{ marginTop: "250px", marginBottom: "250px" }}
+      style={{ marginTop: "200px", marginBottom: "150px" }}
     >
       <ProfileCard></ProfileCard>
     
