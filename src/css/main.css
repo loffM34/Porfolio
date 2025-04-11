@@ -592,6 +592,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ml-8 {
   margin-left: 2rem;
 }
+.ml-24{
+  margin-left: 5rem;
+}
 .block {
   display: block;
 }
@@ -642,6 +645,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-7 {
   width: 1.75rem;
+}
+.w-10 {
+  width: 2rem;
 }
 .w-24 {
   width: 6rem;
@@ -1382,6 +1388,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:items-center {
     align-items: center;
   }
+  /* .sm\:justify-center{
+    justify-content: center;
+  } */
 
   .sm\:justify-between {
     justify-content: space-between;

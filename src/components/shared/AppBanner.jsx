@@ -1,4 +1,5 @@
 import useThemeSwitcher from "../../hooks/useThemeSwitcher";
+import surfSoccerDev from "../../images/surfSoccerDev.png";
 import { FiArrowDownCircle, FiEye, FiMapPin } from "react-icons/fi";
 import HireMeModal from "../HireMeModal";
 import surfingDeveloper from "../../images/surfingDeveloper.png";
@@ -27,7 +28,7 @@ const AppBanner = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-      className="flex flex-col sm:justify-between items-center sm:flex-row mt-12 md:mt-2"
+      className="flex flex-col justify-center max-w-2xl items-center sm:flex-row mt-12 md:mt-2"
     >
       <div className="w-full md:w-1/3 text-left">
         <motion.h1
@@ -50,13 +51,13 @@ const AppBanner = () => {
             duration: 0.9,
             delay: 0.2,
           }}
-          className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
+          className=" font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
         >
           Software Engineer
-          <p className="flex items-center gap-2 text-md max-w-xl mb-4 text-ternary-dark dark:text-ternary-light">
-  <FiMapPin className="text-lg" />
-  <span>Hoboken, NJ</span>
-</p>
+          <p className="flex items-center align-ven gap-2 text-md max-w-xl mb-4 text-ternary-dark dark:text-ternary-light">
+            <FiMapPin className="text-lg" />
+            <span>Hoboken, NJ</span>
+          </p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -66,29 +67,26 @@ const AppBanner = () => {
             duration: 0.9,
             delay: 0.3,
           }}
-          className="flex justify-center sm:block"
+          className="flex sm:justify-center"
         >
           <a
             download="MichaelLoffResume.pdf"
             href="/files/MichaelLoffResume2.pdf"
-            className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
+            className="font-general-medium flex justify-center items-center w-36 sm:w-48 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
             aria-label="Download Resume"
           >
-            <FiArrowDownCircle className="mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiArrowDownCircle>
-            <span className="text-sm sm:text-lg font-general-medium duration-100">
+            <FiArrowDownCircle className="mr-2 duration-100"></FiArrowDownCircle>
+            <p className="text-sm sm:text-lg font-general-medium duration-100">
               Download CV
-            </span>
+            </p>
           </a>
           <a
             href="/files/MichaelLoffResume2.pdf"
             target="blank"
-            className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
+            className="font-general-medium flex justify-center items-center max-w-sm sm:w-24 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
             aria-label="Download Resume"
           >
-            <FiEye className="mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiEye>
-            <span className="text-sm sm:text-lg font-general-medium duration-100">
-              Preview
-            </span>
+            <FiEye className="h-5 w-10 sm:w-6 sm:h-6 duration-100" />
           </a>
         </motion.div>
       </div>
@@ -96,19 +94,14 @@ const AppBanner = () => {
         initial={{ opacity: 0, y: -180 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-        className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
+        className="flex justify-center max-w-xl ml-24 items-center mx-auto mt-8 sm:mt-0"
       >
         <img
-          src={activeTheme === "dark" ? surfingDeveloper : surfingDeveloper}
+          src={activeTheme === "dark" ? surfSoccerDev : surfSoccerDev}
           alt="Developer"
+          className="max-w-full h-auto rounded-xl shadow-md"
         />
       </motion.div>
-      <div>
-        {showModal ? (
-          <HireMeModal onClose={showHireMeModal} onRequest={showHireMeModal} />
-        ) : null}
-        {showModal ? showHireMeModal : null}
-      </div>
     </motion.section>
   );
 };

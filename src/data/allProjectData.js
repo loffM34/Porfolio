@@ -2,11 +2,18 @@
 import Image1 from "../images/logo-dark.png";
 import Image2 from "../images/logo-dark.png";
 import Image3 from "../images/logo-dark.png";
+import waveWatchSearch from "../images/waveWatchSearch.png";
+import waveWatchLogo from "../images/waveWatchLogo.png";
+import waveWatchForecast from "../images/waveWatchForecast.png";
+import clubCompassHome from "../images/clubCompassHome.png";
+import clubCompasReviews from "../images/clubCompassReview.png";
+import clubCompasClubPage from "../images/clubCompassClubPage.png";
 import moola1 from "../images/MoolaAnalyticScreen.png";
 import moola2 from "../images/MoolaNewBotModal.png";
 import moola3 from "../images/moolaHomePage.jpg";
 import macroVision1 from "../images/macroVisionLunch.png";
 import macroVision2 from "../images/macroVisionVision.png";
+import macroVisionLogo from "../images/MacroVisionLogo.png";
 
 // Import icons
 import {
@@ -29,33 +36,32 @@ export const allProjectsData = [
       {
         id: 1,
         title: "Wave Watch Forecast UI",
-        img: Image1,
+        img: waveWatchLogo,
       },
       {
         id: 2,
         title: "Wave Watch Mobile View",
-        img: Image2,
+        img: waveWatchSearch,
       },
       {
         id: 3,
         title: "Wave Watch Dashboard",
-        img: Image3,
+        img: waveWatchForecast,
       },
     ],
     ProjectInfo: {
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Design and develop a visually engaging surf forecast web application that provides users with real-time wave data and surf conditions, inspired by Surfline but with a uniquely minimalist interface.",
+        "Design and develop a visually engaging surf forecast web application that provides users with real-time wave data and surf conditions, inspired by Surfline.",
       Technologies: [
         {
           title: "Tools & Technologies",
           techs: [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Vue.js",
+            "Next.JS",
+            "Typescript",
             "TailwindCSS",
-            "AdobeXD",
+            "PostgreSQL",
+            "Supabase",
           ],
         },
       ],
@@ -69,12 +75,12 @@ export const allProjectsData = [
         {
           id: 2,
           details:
-            "I used TailwindCSS for layout and responsiveness, AdobeXD for initial mockups and prototypes, and Vue.js for component-based rendering. The forecast data is parsed and displayed in a modular layout optimized for both desktop and mobile users.",
+            "I used Next.JS and TailwindCSS for the frontend layout and responsiveness and PostgreSQL/Supabase backend to handle user authentication and storing surf data. The forecast data is parsed and displayed in a modular layout optimized for both desktop and mobile users.",
         },
         {
           id: 3,
           details:
-            "One of the biggest challenges I faced was structuring and styling complex forecast data in a way that felt clean and digestible. Surf data can be dense and hard to read, so a lot of attention went into visual hierarchy, iconography, and responsive design decisions. Debugging layout shifts between breakpoints and optimizing for fast load times on mobile devices also proved challenging during development.",
+            "One of the biggest challenges I faced was structuring and styling complex forecast data in a way that felt clean and digestible. Surf data can be dense and hard to read, so a lot of attention went into visual hierarchy, iconography, and responsive design decisions.",
         },
         {
           id: 4,
@@ -126,9 +132,9 @@ export const allProjectsData = [
       tags: "AI / Full Stack",
     },
     ProjectImages: [
-      { id: 1, title: "Marcovision Upload UI", img: Image1 },
-      { id: 2, title: "Marcovision Nutrition Results", img: Image2 },
-      { id: 3, title: "Marcovision User Dashboard", img: Image3 },
+      { id: 1, title: "Marcovision Upload UI", img: macroVisionLogo },
+      { id: 2, title: "Marcovision Nutrition Results", img: macroVision2 },
+      { id: 3, title: "Marcovision User Dashboard", img: macroVision1 },
     ],
     ProjectInfo: {
       ObjectivesHeading: "Objective",
@@ -137,7 +143,7 @@ export const allProjectsData = [
       Technologies: [
         {
           title: "Tools & Technologies",
-          techs: ["React", "Next.js", "Supabase", "TensorFlow", "TailwindCSS"],
+          techs: ["React", "Next.js", "Supabase", "PyTorch", "TailwindCSS"],
         },
       ],
       ProjectDetailsHeading: "Challenge",
@@ -145,12 +151,12 @@ export const allProjectsData = [
         {
           id: 1,
           details:
-            "Marcovision is a full-stack AI application that helps users understand what’s on their plate—literally. By uploading an image of a meal, users receive a breakdown of calories, macronutrients, and portion sizes powered by a custom-trained image classification model and USDA’s open food database.",
+            "Marcovision is a full-stack AI application that helps users understand what’s on their plate—literally. By uploading an image of a meal, users receive a breakdown of calories, and macronutrients powered by a custom-trained image classification model and USDA’s open food database.",
         },
         {
           id: 2,
           details:
-            "The project combines React and Next.js on the frontend with Supabase for authentication and meal history tracking. TensorFlow was used to build a lightweight model capable of identifying common foods from user-submitted photos, and all nutrition data is served dynamically via API requests.",
+            "The project combines React and Next.js on the frontend with Supabase for authentication and meal history tracking. Pytorch was used to build a lightweight model capable of identifying common foods from user-submitted photos, and all nutrition data is served dynamically via API requests.",
         },
         {
           id: 3,
@@ -160,7 +166,7 @@ export const allProjectsData = [
         {
           id: 4,
           details:
-            "This project pushed my full-stack development skills and introduced me to practical ML deployment considerations. From training and exporting a TensorFlow model to architecting a user-friendly frontend with image preview, upload flow, and persistent logging, Marcovision taught me how to balance usability with technical complexity.",
+            "This project pushed my full-stack development skills and introduced me to practical ML deployment considerations. From training and exporting a Pytorch model to architecting a user-friendly frontend with image preview, upload flow, and persistent logging, Marcovision taught me how to balance usability with technical complexity.",
         },
       ],
       SocialSharingHeading: "Share This",
@@ -218,7 +224,16 @@ export const allProjectsData = [
       Technologies: [
         {
           title: "Tools & Technologies",
-          techs: ["React", "Firebase", "Chart.js", "TailwindCSS"],
+          techs: [
+            "React",
+            "MongoDB",
+            "Node.js",
+            "Express.js",
+            "Bootstrap",
+            "Alpaca API",
+            "Python",
+            "Pytorch",
+          ],
         },
       ],
       ProjectDetailsHeading: "Challenge",
@@ -231,17 +246,17 @@ export const allProjectsData = [
         {
           id: 2,
           details:
-            "The app features authentication via Firebase, secure real-time data storage, and responsive design powered by TailwindCSS. Chart.js was used to deliver sleek visualizations of savings, spending habits, and category distributions.",
+            "The app features authentication via MongoDB, secure real-time data storage, and responsive design powered by Bootstrap.",
         },
         {
           id: 3,
           details:
-            "A major challenge was designing a UX flow that didn’t overwhelm users while still allowing complex features like recurring budgets, multi-month views, and tag-based filtering. Ensuring data consistency, especially with live updates and editing, also required careful Firebase schema planning.",
+            "A major challenge was designing a UX flow that didn’t overwhelm users while still allowing for features such as multiple trading bots, bot trading analytics and current stock data. Ensuring data consistency, especially with live updates and editing, also required careful MongoDB cluster planning.",
         },
         {
           id: 4,
           details:
-            "Through Moola, I deepened my frontend experience while also learning how to work with financial logic, user-centric dashboards, and real-time UI syncing. It taught me to think more about minimalism and data integrity when building tools for everyday users.",
+            "Through Moola, I deepened my frontend experience while also learning how to work with financial logic, user-centric dashboards, real-time UI syncing, and training an AI model using backtesting. It taught me how to maintain proper programming etique on both frontend and backend focusing on maintaining data integrity.",
         },
       ],
       SocialSharingHeading: "Share This",
@@ -287,9 +302,9 @@ export const allProjectsData = [
       tags: "Campus / Web App",
     },
     ProjectImages: [
-      { id: 1, title: "Club Compass Home Page", img: Image1 },
-      { id: 2, title: "Club Info and Reviews", img: Image2 },
-      { id: 3, title: "Student Dashboard View", img: Image3 },
+      { id: 1, title: "Club Compass Home Page", img: clubCompassHome },
+      { id: 2, title: "Club Info and Reviews", img: clubCompasClubPage },
+      { id: 3, title: "Student Dashboard View", img: clubCompasReviews },
     ],
     ProjectInfo: {
       ObjectivesHeading: "Objective",
@@ -306,7 +321,7 @@ export const allProjectsData = [
         {
           id: 1,
           details:
-            "Club Compass is a review and discovery web app that lets students learn more about campus organizations, browse by category or interest, and leave feedback about their experiences with different clubs.",
+            "Club Compass is a review and discovery web app that lets students learn more about campus organizations, search for specific clubs/organizations, and leave feedback about their experiences with these different clubs.",
         },
         {
           id: 2,
@@ -316,7 +331,7 @@ export const allProjectsData = [
         {
           id: 3,
           details:
-            "The biggest challenge was creating a scalable review and feedback system that encouraged honest participation without requiring full logins. Striking a balance between functionality and simplicity for college users also meant trimming features that added clutter rather than value.",
+            "The biggest challenge was collaborating with a team of people who had vastly different skill levels. Being able to properly distribute work and provide help to my teammates with debugging and testing was essential to this projects success. A technical challenge we faced was developing a scalable review and feedback system that encouraged honest participation without requiring full logins. Striking a balance between functionality and simplicity for college users also meant trimming features that added clutter rather than value.",
         },
         {
           id: 4,

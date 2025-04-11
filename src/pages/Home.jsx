@@ -28,7 +28,9 @@ const Home = () => {
   }, [hash]);
   return (
     <div className="container mx-auto">
-      <AppBanner></AppBanner>
+      <div className="w-full min-h-screen flex justify-center items-center px-4">
+        <AppBanner></AppBanner>
+      </div>
 
       <AboutMeProvider>
         <motion.div

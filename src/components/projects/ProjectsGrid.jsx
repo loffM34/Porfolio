@@ -19,7 +19,7 @@ const ProjectsGrid = () => {
     <section className="py-5 sm:py-10 mt-5 sm:mt-10" id="projectsSection">
       <div className="text-center">
         <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
-          Projects portfolio
+          Projects
         </p>
       </div>
 
@@ -105,24 +105,24 @@ const ProjectsGrid = () => {
               />
             ))
           : searchProject
-            ? searchProjectsByTitle.map((project) => (
-                <ProjectSingle
-                  id={project.id}
-                  title={project.title}
-                  category={project.category}
-                  image={project.img}
-                  key={project.id}
-                />
-              ))
-            : projects.map((project) => (
-                <ProjectSingle
-                  id={project.id}
-                  title={project.title}
-                  category={project.category}
-                  image={project.img}
-                  key={project.id}
-                />
-              ))}
+          ? searchProjectsByTitle.map((project) => (
+              <ProjectSingle
+                id={project.id}
+                title={project.title}
+                category={project.category}
+                image={project.img}
+                key={project.id}
+              />
+            ))
+          : projects.map((project) => (
+              <ProjectSingle
+                id={project.id}
+                title={project.title}
+                category={project.category}
+                image={project.img}
+                key={project.id}
+              />
+            ))}
       </div>
     </section>
   );
